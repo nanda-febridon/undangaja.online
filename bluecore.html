@@ -272,16 +272,29 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-6">
-						<form method="POST" action="#">
+						<div class="alert alert-success alert-dismissible fade show d-none alert-terima" role="alert">
+							<strong>Terimakasih!</strong> Ucapan anda telah kami kirim.
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+						</div>
+						<form name="submit-form-undangaja">
 							<div class="mb-3">
-								<label for="inputNama" class="form-label">Nama Anda</label>
-								<input type="name" class="form-control" id="inputNama" />
+								<label for="inputNama" class="form-label">Nama</label>
+								<input type="name" class="form-control" id="inputNama" name="nama" required />
 							</div>
 							<div class="mb-3">
-								<label for="inputUcapan" class="form-label">Kirim Ucapan</label>
-								<textarea class="form-control" id="inputUcapan" rows="3"></textarea>
+								<label for="inputEmail" class="form-label">Email (Optional)</label>
+								<input type="email" class="form-control" id="inputEmail" name="email" />
 							</div>
-							<button type="submit" class="btn color-blue">Kirim Ucapan</button>
+							<div class="mb-3">
+								<label for="inputUcapan" class="form-label">Pesan</label>
+								<textarea class="form-control" id="inputUcapan" name="pesan" rows="3" required></textarea>
+							</div>
+							<button type="submit" class="btn color-blue btn-kirim">Kirim Ucapan</button>
+
+							<button class="btn color-blue d-none btn-putar" type="button" disabled>
+								<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+								Loading...
+							</button>
 						</form>
 					</div>
 				</div>
@@ -353,6 +366,29 @@
 						//seconds
 					}, 0);
 			})();
+		</script>
+
+		<script>
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbyz8kwGuHJCzZJe8lun5IFqojnJIy5IwZa9ovcam0IjqVei-M3HLjZztFOqFapxLkgahw/exec';
+			const form = document.forms['submit-form-undangaja'];
+			const btnKirim = document.querySelector('.btn-kirim');
+			const btnLoading = document.querySelector('.btn-putar');
+			const alertTerima = document.querySelector('.alert-terima');
+
+			form.addEventListener('submit', (e) => {
+				e.preventDefault();
+				btnLoading.classList.toggle('d-none');
+				btnKirim.classList.toggle('d-none');
+				fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+					.then((response) => {
+						btnLoading.classList.toggle('d-none');
+						btnKirim.classList.toggle('d-none');
+						alertTerima.classList.toggle('d-none');
+						form.reset();
+						console.log('Success!', response);
+					})
+					.catch((error) => console.error('Error!', error.message));
+			});
 		</script>
 	</body>
 </html>
