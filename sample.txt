@@ -1,0 +1,33 @@
+format undangan
+
+1. jumbotron
+	- the wedding
+	- invitation
+	- photo
+	- nama pembelai
+	- tanggal
+
+2. sambutan
+	- kata kata
+
+3. perkenalan pembelai
+	- cerita singkat
+	- pembelai pria/wanita 1
+	- pembelai pria/wanita 2
+
+4. wedding event
+	-akad nikah
+		-tanggal & jam
+		-lokasi
+	-resepsi
+		-tanggal & jam
+		-lokasi
+
+5. countdown event time
+	-revers time event
+
+6. galery photos
+
+7. ucapan
+
+8. footer
