@@ -1,206 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Required meta tags -->
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, intial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- link fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet" />
+		<!-- Bootstrap icon -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
 
+		<!-- font goolge -->
+		<link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet" />
+
+		<!-- font family -->
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet" />
 		<title>undangaja.</title>
 		<link rel="icon" href="image/logo/logo.png" />
 	</head>
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+		body {
+			background: url(image/index-dashboard.jpg) no-repeat center center fixed;
+			height: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			/* color: #303841; */
+		}
+		.color-black {
+			background: #3a4750;
+		}
+		.color-red {
+			background: #d72323;
+			color: white;
+		}
+		.color-white {
+			background: #eeeeee;
+		}
+		.color-abu {
+			background: #3a4750;
+			color: white;
+		}
+		.fontacme {
+			font-family: 'Acme', sans-serif;
+		}
+	</style>
 	<body>
-		<!-- <div id="splash">
-		<img src="./image/logo.png" class="logo">
-	</div>-->
-
-		<div class="content">
-			<header class="app-header">
-				<div class="container">
-					<img src="image/logo/logofull.png" alt="logo full" />
+		<!-- navbar -->
+		<nav class="navbar navbar-expand-lg navbar-dark color-black">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="image/logo/logofull.png" alt="undangaja logo" width="100" class="d-inline-block align-text-top" />
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse fontacme" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#fitur">Fitur</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#whyus">Why Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#desain">Desain</a>
+						</li>
+					</ul>
 				</div>
-			</header>
-
-			<div class="welcome-header">
-				<h2>Wedding Website Invitation</h2>
-				<h1>Sebrakan Undanganmu Dengan Mudah Bersama Kami <b>undang-aja.com</b></h1>
 			</div>
+		</nav>
+		<!-- end navbar -->
 
-			<div class="app-menu">
-				<div class="menu" id="menu-nikah">
-					<a onclick="menu_toggle_wedding(this)">Wedding Invitation <i class="fa fa-chevron-circle-down"></i></a>
-					<div class="submenu" id="submenu-nikah">
-						<div class="submenu-grid">
-							<div class="submenu-item" onclick="window.open('bluecore.html')">
-								<h4>DEMO BLUECORE</h4>
-								<img src="image/demobluecore.JPG" alt="demobluecore" />
-								<p>Rp. 20.000</p>
+		<!-- jumbotron -->
+		<section id="home" class="container text-center mt-5 py-5" style="width: 100%">
+			<div class="row justify-content-center">
+				<div class="col-8 fontacme">
+					<h1 class="display-5">Sebarkan Undanganmu Dengan Mudah Bersama Kami <strong>undangaja.</strong></h1>
+				</div>
+			</div>
+			<hr class="my-4" />
+			<div class="row justify-content-center">
+				<div class="col-8">
+					<p><strong>Pilih Desain Undangan Kamu Disini Dan Langsung Sebarkan</strong></p>
+					<div class="d-grid gap-2 col-10 mx-auto">
+						<a class="btn color-red rounded-pill" href="#" role="button">BUAT UNDANGAN</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path
+				fill="#eeeeee"
+				fill-opacity="1"
+				d="M0,192L80,192C160,192,320,192,480,208C640,224,800,256,960,250.7C1120,245,1280,203,1360,181.3L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+			></path>
+		</svg>
+		<!-- end jumbotron -->
+
+		<!-- fitur -->
+		<section id="fitur" class="color-white">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col">
+						<h1 class="fontacme">Fitur Undangan Kami</h1>
+						<p>Dapatkan Fitur fitur yang menarik disini</p>
+					</div>
+				</div>
+				<div class="row row-cols-2 row-cols-sm-4 justify-content-center">
+					<div class="col mb-3">
+						<div class="card">
+							<img src="image/background.jpg" class="card-img-top" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title fontacme">Desain Terkini</h5>
+								<p class="card-text"><small>Desain undangan yang menarik dan kekinian.</small></p>
 							</div>
-
-							<div class="submenu-item" onclick="window.open('../wedding/desaindua/demodua.html')">
-								<h4>DEMO 02</h4>
-								<img src="./image/demo02.jpg" />
-								<p>Rp. 25.000</p>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div class="card">
+							<img src="image/background.jpg" class="card-img-top" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title fontacme">Responsive</h5>
+								<p class="card-text"><small>Undanganmu tampil responsive disetiap perangkat.</small></p>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div class="card">
+							<img src="image/background.jpg" class="card-img-top" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title fontacme">Galeri Foto</h5>
+								<p class="card-text"><small>undanganmu akan lebih menarik dengan kumpulan foto prewedding.</small></p>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div class="card">
+							<img src="image/background.jpg" class="card-img-top" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title fontacme">Peta Lokasi</h5>
+								<p class="card-text"><small>Tamu undanganmu akan lebih mudah menemukan lokasi acara.</small></p>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div class="card">
+							<img src="image/background.jpg" class="card-img-top" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title fontacme">Ucapan</h5>
+								<p class="card-text"><small>Menerima ucapan atau pesan dari tamu undaganmu.</small></p>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div class="card">
+							<img src="image/background.jpg" class="card-img-top" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title fontacme">Musik</h5>
+								<p class="card-text"><small>Undanganmu lebih menarik dengan diiringi latar musik.</small></p>
 							</div>
 						</div>
 					</div>
 				</div>
-
-				<!-- <div class="menu" id="menu-birthday">
-				<a onclick="menu_toggle_birthday(this)">Birthday Invitation <i class="fa fa-chevron-circle-down"></i></a>
-				<div class="submenu" id="submenu-birthday">
-					<div class="submenu-grid">
-						<div class="submenu-item">
-							<h4>DEMO 01</h4>
-							<img src="./image/demo01.jpg">
-							<p>Rp. 40.000</p>	
-						</div>
-
-						<div class="submenu-item">
-							<h4>DEMO 01</h4>
-							<img src="./image/demo01.jpg">
-							<p>Rp. 45.000</p>	
-						</div>
-					</div>
-				</div>
-			</div> -->
 			</div>
+		</section>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path fill="#eeeeee" fill-opacity="1" d="M0,0L80,32C160,64,320,128,480,128C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+		</svg>
+		<!-- end fitur -->
 
-			<div class="dash-grid">
-				<h1>Mengapa Harus Dengan <b>undang-aja.com</b></h1>
-				<div class="grid container">
-					<div class="item">
-						<div class="logo">
-							<i class="fa fa-money"></i>
-							<h3>Hemat Biaya</h3>
-						</div>
-						<p>Kamu bisa menghemat lebih banyak biaya pernikahan. Dengan undangan website kamu bisa menyebarkan undangan tanpa harus mencetak lagi.</p>
-					</div>
-					<div class="item">
-						<div class="logo">
-							<i class="fa fa-handshake-o"></i>
-							<h3>Akses Gampang</h3>
-						</div>
-						<p>Untuk Mengakses undangan online kamu, kamu hanya perlu meng-klik link yang sudah ada. Kami buat undanganmu mudah dipahami di semua kalangan.</p>
-					</div>
-
-					<div class="item">
-						<div class="logo">
-							<i class="fa fa-telegram"></i>
-							<h3>Sebarkan via Sosial Media</h3>
-						</div>
-						<p>Sebarkan undangan ke berbagai sosial media yang kamu punya. Kabrakan momen indahmu tanpa ada batasan dan waktu</p>
-					</div>
-
-					<div class="item">
-						<div class="logo">
-							<i class="fa fa-envelope-open"></i>
-							<h3>Undangan Tanpa Batas</h3>
-						</div>
-						<p>Jangkau tamu undanganmu lebih banyak dengan undang-aja.com.</p>
+		<!-- why us -->
+		<section id="whyus" class="mb-3">
+			<div class="container text-center fontacme">
+				<div class="row justify-content-center">
+					<div class="col-8">
+						<h1>kenapa Harus Dengan undangaja.</h1>
+						<p>Dengan kamu menggunakan undangaja kamu bisa menghemat biaya dan dengan mudah menyebarkan undanganmu ke semua teman - teman kamu.</p>
 					</div>
 				</div>
 			</div>
+		</section>
+		<!-- end why us -->
 
-			<br />
-			<br />
-			<br />
-			<div class="dash-grid-fitur">
-				<h1>Fitur undangan di <b>undang-aja.com</b></h1>
-				<div class="grid-fitur container">
-					<div class="item-fitur">
-						<i class="fa fa-mobile"></i>
-						<h3>Mobile Friendly</h3>
-					</div>
-
-					<div class="item-fitur">
-						<i class="fa fa-gratipay"></i>
-						<h3>Informasi Kedua Pasangan</h3>
-					</div>
-
-					<div class="item-fitur">
-						<i class="fa fa-address-card"></i>
-						<h3>Custom Nama Tamu</h3>
-					</div>
-
-					<div class="item-fitur">
-						<i class="fa fa-camera-retro"></i>
-						<h3>Galeri Foto</h3>
-					</div>
-
-					<div class="item-fitur">
-						<i class="fa fa-spinner"></i>
-						<h3>Countdown Wedding</h3>
-					</div>
-
-					<div class="item-fitur">
-						<i class="fa fa-map-marker"></i>
-						<h3>Peta Lokasi</h3>
-					</div>
-
-					<div class="item-fitur">
-						<i class="fa fa-home"></i>
-						<h3>Lokasi Tempat & Waktu</h3>
-					</div>
-
-					<div class="item-fitur">
-						<i class="fa fa-music"></i>
-						<h3>Musik</h3>
-					</div>
-
-					<div class="item-fitur">
-						<i class="fa fa-play-circle"></i>
-						<h3>Video</h3>
-					</div>
-
-					<div class="item-fitur">
-						<i class="fa fa-glass"></i>
-						<h3>Elegant Styles</h3>
+		<!-- desain -->
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path
+				fill="#3A4750"
+				fill-opacity="1"
+				d="M0,224L80,224C160,224,320,224,480,234.7C640,245,800,267,960,261.3C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+			></path>
+		</svg>
+		<section id="desain" class="color-abu">
+			<div class="container text-center">
+				<div class="row mb-5">
+					<div class="col fontacme">
+						<h1>Desain</h1>
+						<p>Pilih dan Temukan Desain yang kamu inginkan</p>
 					</div>
 				</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-3 mb-3">
+						<div class="card">
+							<img src="image/demobluecore.JPG" class="card-img-top" alt="..." />
+							<div class="card-body text-dark">
+								<h5 class="card-title text-danger">BLUECORE</h5>
+								<a href="bluecore.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 mb-3">
+						<div class="card">
+							<img src="image/demobluecore.JPG" class="card-img-top" alt="..." />
+							<div class="card-body text-dark">
+								<h5 class="card-title text-danger">BLUECORE</h5>
+								<a href="bluecore.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 mb-3">
+						<div class="card">
+							<img src="image/demobluecore.JPG" class="card-img-top" alt="..." />
+							<div class="card-body text-dark">
+								<h5 class="card-title text-danger">BLUECORE</h5>
+								<a href="bluecore.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 mb-3">
+						<div class="card">
+							<img src="image/demobluecore.JPG" class="card-img-top" alt="..." />
+							<div class="card-body text-dark">
+								<h5 class="card-title text-danger">BLUECORE</h5>
+								<a href="bluecore.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mt-3">
+					<button type="button" class="btn color-red rounded-pill">LIHAT LEBIH BANYAK</button>
+				</div>
 			</div>
+		</section>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path fill="#3a4750" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,165.3C640,160,800,128,960,106.7C1120,85,1280,75,1360,69.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+		</svg>
+		<!-- end desain -->
 
-			<br />
-			<div class="app-footer">
-				<h1>Yuk!! Nunggu apa lagi</h1>
-				<p>"Pesan melalui Whatsapp"</p>
-				<a>Order Now</a>
-			</div>
-		</div>
+		<!-- footer -->
+		<footer class="color-blue pb-3 text-center text-white">
+			<p>
+				Created with <i class="bi bi-heart-fill text-danger"></i> by <a class="text-primary text-decoration-none" href="https://www.undangaja.online"><img src="image/logo/logofull.png" alt="undangaja log" width="100px" /></a>
+			</p>
+		</footer>
+		<!-- end footer -->
 
-		<div class="copyright">
-			<p>copyright undang-aja.com <i class="fa fa-copyright"></i> 2021</p>
-		</div>
-
-		<script type="text/javascript">
-			function menu_toggle_wedding() {
-				var wedding = document.getElementById('submenu-nikah');
-				if (wedding.style.display === 'block') {
-					wedding.style.display = 'none';
-				} else {
-					wedding.style.display = 'block';
-				}
-			}
-
-			/*function menu_toggle_birthday(){
-			var birthday = document.getElementById("submenu-birthday");
-			if(birthday.style.display === "block"){
-				birthday.style.display = "none"
-			}else{
-				birthday.style.display = "block"
-			}
-		}*/
-
-			/*setTimeout(() =>{
-			document.getElementById('splash').classList.toggle('fade');
-		}, 300);*/
-		</script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 	</body>
 </html>
