@@ -14,15 +14,15 @@
 		<!-- oas scrooling animation -->
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-		<!-- font family -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
 		<!-- font goolge -->
 		<link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet" />
 
-		<title>BLUECORE | undangaja.</title>
+		<!-- font family -->
+		<link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+
+		<title>YELLOWBIRD | undangaja.</title>
 		<link rel="icon" href="image/logo/logo.png" />
 	</head>
 	<style>
@@ -30,36 +30,27 @@
 			scroll-behavior: smooth;
 		}
 		body {
-			background: url(image/background/background.jpg) no-repeat center center fixed;
+			background: url('image/background/background-yellowbird.jpg') no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
 		}
-
-		.jumbotron {
-			padding-top: 1rem;
+		.fontbon {
+			font-family: 'Bonheur Royale', cursive;
 		}
-
-		.fontfluer {
-			font-family: 'Fleur De Leah', cursive;
+		.fontdancing {
+			font-family: 'Dancing Script', cursive;
 		}
-
-		.fontcarrat {
-			font-family: 'Carattere', cursive;
+		.color-yellow {
+			background: #ffc107;
 		}
-
-		.color-blue {
-			background-color: #64c9cf;
-		}
-
 		.music-button {
 			position: fixed;
 			right: 3.5%;
 			bottom: 2.5%;
 		}
 	</style>
-
 	<body>
 		<!-- audio -->
 		<audio id="music" controls loop style="display: none">
@@ -71,96 +62,28 @@
 		<!-- end audio -->
 
 		<!-- jumbotron -->
-		<section class="jumbotron text-center" data-aos="fade-down">
-			<h1 class="display-4 fontfluer">The Wedding</h1>
+		<section class="jumbotron text-center mt-5" data-aos="fade-down">
+			<h1 class="display-4 fontbon">The Wedding</h1>
 			<p>We invited you to celebrate our wedding</p>
-			<img data-aos="zoom-in" class="rounded-circle img-fluid img-thumbnail" src="image/header.jpg" alt="weding" width="300" />
-			<h1 class="fontcarrat">Romeo & Juliet</h1>
+			<img class="rounded-circle img-fluid img-thumbnail" src="image/4.jpg" alt="image jumbo" width="300px" />
+			<h1 class="fontdancing">Romeo & Juliet</h1>
 			<h5>25 Januari 2025</h5>
-			<a class="btn color-blue btn-sm col-sm-3" href="#event" role="button">Save the Date</a>
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-				<path
-					fill="#64C9CF"
-					fill-opacity="1"
-					d="M0,224L48,234.7C96,245,192,267,288,256C384,245,480,203,576,176C672,149,768,139,864,160C960,181,1056,235,1152,256C1248,277,1344,267,1392,261.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-				></path>
-			</svg>
+			<a class="btn btn-warning btn-sm col-sm-3 rounded-pill shadow" href="#event" role="button"><strong>SAVE THE DATE</strong></a>
 		</section>
 		<!-- end jumbotron -->
 
 		<!-- welcome -->
-		<section id="welcome" class="color-blue">
-			<div class="container text-center">
-				<div class="row justify-content-center">
-					<div class="col-md-3" data-aos="fade-up">
-						<p>
-							“Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan di antara kamu rasa kasih dan sayang.
-							Sungguh, pada demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berfikir.“
-						</p>
-						<small>(QS. Ar-Rum ayat 21)</small>
-					</div>
-				</div>
-				<img src="image/logo/logo bunga.png" alt="logo bunga" width="120px" />
-			</div>
-		</section>
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 			<path
-				fill="#64C9CF"
+				fill="#ffc107"
 				fill-opacity="1"
-				d="M0,192L48,202.7C96,213,192,235,288,224C384,213,480,171,576,133.3C672,96,768,64,864,58.7C960,53,1056,75,1152,96C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+				d="M0,224L60,224C120,224,240,224,360,208C480,192,600,160,720,138.7C840,117,960,107,1080,101.3C1200,96,1320,96,1380,96L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
 			></path>
 		</svg>
-		<!-- end welcome -->
-
-		<!-- mempelai -->
-		<section>
+		<section id="" class="bg-warning">
 			<div class="container text-center">
-				<div class="row mb-5" data-aos="fade-up">
-					<div class="col">
-						<h5>Maha suci Allah SWT yang telah menciptakan makhluknya berpasang-pasangan.</h5>
-						<h6>Putra & Putri Kami :</h6>
-					</div>
-				</div>
-				<div class="row justify-content-center" data-aos="fade-up">
-					<div class="col-md-3 mb-2 align-self-center">
-						<h1 class="fontcarrat">Romeo Vernandes</h1>
-						<p>Putra Kedua dari</p>
-						<h6>Bapak ramos</h6>
-						<p>&</p>
-						<h6>Ibu Meti</h6>
-					</div>
-					<div class="col-md-3 mb-2 align-self-center">
-						<img class="rounded-circle img-fluid img-thumbnail" src="image/4.jpg" alt="" width="300px;" />
-					</div>
-					<div class="col-md-3 mb-2 align-self-center">
-						<h1 class="fontcarrat">Juliet Ekawati</h1>
-						<p>Putri Pertama dari</p>
-						<h6>Bapak andes</h6>
-						<p>&</p>
-						<h6>Ibu vara</h6>
-					</div>
-				</div>
-			</div>
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-				<path
-					fill="#64c9cf"
-					fill-opacity="1"
-					d="M0,128L48,117.3C96,107,192,85,288,90.7C384,96,480,128,576,122.7C672,117,768,75,864,74.7C960,75,1056,117,1152,122.7C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-				></path>
-			</svg>
-		</section>
-		<!-- end mempelai -->
-
-		<!-- event -->
-		<section class="color-blue" id="event">
-			<div class="container text-center">
-				<div class="row mb-2">
-					<div class="col" data-aos="fade-up">
-						<h1 class="fontfluer">Wedding Event</h1>
-						<img src="image/logo/logo bunga.png" alt="logo bunga" width="120px" />
-					</div>
-				</div>
-				<div class="row mb-3 justify-content-center fontcarrat" data-aos="fade-down">
+				<img src="image/logo/logo wing.png" alt="logo wing" width="100px" data-aos="fade-up" />
+				<div class="row mb-3 justify-content-center fontdancing" data-aos="fade-up">
 					<div class="col-3">
 						<h1 id="days">days</h1>
 						<p>Day</p>
@@ -179,36 +102,109 @@
 					</div>
 				</div>
 				<div class="row justify-content-center" data-aos="fade-up">
-					<div class="col-sm-4 mb-2">
-						<div class="card shadow" style="background: #b5deff">
-							<div class="card-body">
-								<h2 class="card-title fontcarrat">Akad Nikah</h2>
-								<h5 class="card-title">Rabu, 25 Januari 2025</h5>
-								<h6 class="card-text">08.00 WIB s/d Selesai</h6>
-								<p class="card-text">Jl.Kampung Melayu no.25, Masjid Al-Aqsa</p>
-								<a href="https://goo.gl/maps/XgUKq9cX6kcqM4kr5" target="_blank" class="btn btn-light rounded-pill">Open Location</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 mb-2">
-						<div class="card shadow" style="background: #b5deff">
-							<div class="card-body">
-								<h2 class="card-title fontcarrat">Acara Resepsi</h2>
-								<h5 class="card-title">Kamis, 26 Januari 2025</h5>
-								<h6 class="card-text">10.00 WIB s/d Selesai</h6>
-								<p class="card-text">Jl.buaran baru no.5, Hotel Purnama</p>
-								<a href="https://goo.gl/maps/XgUKq9cX6kcqM4kr5" target="_blank" class="btn btn-light rounded-pill">Open Location</a>
-							</div>
-						</div>
+					<div class="col-md-6">
+						<p>
+							“Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan di antara kamu rasa kasih dan sayang.
+							Sungguh, pada demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berfikir.“
+						</p>
+						<small>(QS. Ar-Rum ayat 21)</small>
 					</div>
 				</div>
 			</div>
 		</section>
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 			<path
-				fill="#64c9cf"
+				fill="#ffc107"
 				fill-opacity="1"
-				d="M0,128L48,122.7C96,117,192,107,288,112C384,117,480,139,576,122.7C672,107,768,53,864,48C960,43,1056,85,1152,101.3C1248,117,1344,107,1392,101.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+				d="M0,64L60,80C120,96,240,128,360,128C480,128,600,96,720,90.7C840,85,960,107,1080,117.3C1200,128,1320,128,1380,128L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+			></path>
+		</svg>
+		<!-- end welcome -->
+
+		<!-- mempelai -->
+		<section id="mempelai">
+			<div class="container text-center">
+				<div class="row mb-5" data-aos="fade-up">
+					<div class="col">
+						<h5>Maha suci Allah SWT yang telah menciptakan makhluknya berpasang-pasangan.</h5>
+						<h6>Putra & Putri Kami :</h6>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-4 align-self-center" data-aos="fade-up">
+						<img class="rounded-circle img-fluid img-thumbnail" src="image/m-pria.jpg" alt="m pria" width="200px" />
+						<h1 class="fontdancing">Romeo Vernandes</h1>
+						<p>Putra Kedua dari</p>
+						<h6>Bapak ramos</h6>
+						<p>&</p>
+						<h6>Ibu Meti</h6>
+					</div>
+					<div class="col-sm-4 align-self-center" data-aos="fade-up">
+						<img src="image/logo/logo burung.png" alt="logo burung" width="200px" />
+					</div>
+					<div class="col-sm-4 align-self-center" data-aos="fade-up">
+						<img class="rounded-circle img-fluid img-thumbnail" src="image/m-wanita.jpg" alt="m pria" width="200px" />
+						<h1 class="fontdancing">Juliet Ekawati</h1>
+						<p>Putri Pertama dari</p>
+						<h6>Bapak andes</h6>
+						<p>&</p>
+						<h6>Ibu vara</h6>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end mempelai -->
+
+		<!-- event -->
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path
+				fill="#ffc107"
+				fill-opacity="1"
+				d="M0,224L60,229.3C120,235,240,245,360,240C480,235,600,213,720,197.3C840,181,960,171,1080,170.7C1200,171,1320,181,1380,186.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+			></path>
+		</svg>
+		<section class="color-yellow text-center">
+			<div class="container">
+				<div class="row" data-aos="fade-down">
+					<div class="col mb-3">
+						<h1 class="fontbon">Wedding Event</h1>
+						<img src="image/logo/logo wing.png" alt="logo wing" width="100px" />
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-4 mb-3" data-aos="fade-up">
+						<h1 class="card-title mb-3 fontdancing">Akad Nikah</h1>
+						<h6 class="card-subtitle mb-2 text-muted">Rabu, 25 Januari 2025</h6>
+						<p class="card-text mb-2 text-muted">08.00 WIB s/d Selesai</p>
+						<p class="card-text">Jl.buaran baru no.5, Hotel Purnama</p>
+					</div>
+					<div class="col-sm-4 mb-3" data-aos="fade-up">
+						<h1 class="card-title mb-3 fontdancing">Acara Resepsi</h1>
+						<h6 class="card-subtitle mb-2 text-muted">Rabu, 25 Januari 2025</h6>
+						<p class="card-text mb-2 text-muted">10.00 WIB s/d Selesai</p>
+						<p class="card-text">Jl.buaran baru no.5, Hotel Purnama</p>
+					</div>
+				</div>
+				<a class="btn btn-light btn-sm col-sm-3 mb-2 rounded-pill shadow" href="https://goo.gl/maps/9AyEcVkS9r2YgZse8" target="_blank" role="button" data-aos="fade-up"><strong>Lihat Lokasi</strong></a>
+				<div class="row justify-content-center" data-aos="fade-down">
+					<div class="col-sm-8">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6664669606935!2d106.82496411390589!3d-6.175387062230794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sNational%20Monument!5e0!3m2!1sen!2sid!4v1632388525857!5m2!1sen!2sid"
+							width="100%"
+							height="200"
+							style="border: 1; border-radius: 10px"
+							allowfullscreen=""
+							loading="lazy"
+						></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path
+				fill="#ffc107"
+				fill-opacity="1"
+				d="M0,128L60,133.3C120,139,240,149,360,133.3C480,117,600,75,720,80C840,85,960,139,1080,165.3C1200,192,1320,192,1380,192L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
 			></path>
 		</svg>
 		<!-- end event -->
@@ -218,7 +214,7 @@
 			<div class="container text-center mb-3">
 				<div class="row">
 					<div class="col">
-						<h1 class="fontcarrat">My Galery Photos</h1>
+						<h1 class="fontbon">My Galery Photos</h1>
 					</div>
 				</div>
 			</div>
@@ -233,19 +229,19 @@
 					<div class="carousel-item active">
 						<img src="image/1.jpg" class="d-block w-100 rounded img-thumbnail" alt="image 1" />
 						<div class="carousel-caption d-none d-md-block">
-							<h5 class="fontcarrat">Romeo & Juliet</h5>
+							<h5 class="fontdancing">Romeo & Juliet</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
 						<img src="image/2.jpg" class="d-block w-100 rounded img-thumbnail" alt="image 2" />
 						<div class="carousel-caption d-none d-md-block">
-							<h5 class="fontcarrat">Romeo & Juliet</h5>
+							<h5 class="fontdancing">Romeo & Juliet</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
 						<img src="image/3.jpg" class="d-block w-100 rounded img-thumbnail" alt="image 3" />
 						<div class="carousel-caption d-none d-md-block">
-							<h5 class="fontcarrat">Romeo & Juliet</h5>
+							<h5 class="fontdancing">Romeo & Juliet</h5>
 						</div>
 					</div>
 				</div>
@@ -258,21 +254,18 @@
 					<span class="visually-hidden">Next</span>
 				</button>
 			</div>
-			<div class="text-center mb-5">
-				<img src="image/logo/logo bunga.png" alt="logo bunga" width="250px" />
-			</div>
 		</section>
 		<!-- end galery -->
 
 		<!-- ucapan -->
-		<section id="ucapan" class="mb-3">
+		<section id="ucapan" class="my-5">
 			<div class="text-center">
-				<h1 class="fontcarrat">Untuk Kedua Mempelai</h1>
+				<h1 class="fontdancing">Untuk Kedua Mempelai</h1>
 			</div>
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-6">
-						<div class="alert alert-success alert-dismissible fade show d-none alert-terima" role="alert">
+						<div class="alert alert-warning alert-dismissible fade show d-none alert-terima" role="alert">
 							<strong>Terimakasih!</strong> Ucapan anda telah kami Terima.
 							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 						</div>
@@ -289,11 +282,11 @@
 								<label for="inputUcapan" class="form-label">Pesan</label>
 								<textarea class="form-control" id="inputUcapan" name="pesan" rows="3" required></textarea>
 							</div>
-							<button type="submit" class="btn color-blue btn-kirim">Kirim Ucapan</button>
+							<button type="submit" class="btn btn-warning btn-kirim rounded-pill"><strong>Kirim Ucapan</strong></button>
 
-							<button class="btn color-blue d-none btn-putar" type="button" disabled>
+							<button class="btn btn-warning d-none btn-putar rounded-pill" type="button" disabled>
 								<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-								Loading...
+								<strong>Loading...</strong>
 							</button>
 						</form>
 					</div>
@@ -303,10 +296,7 @@
 		<!-- end ucapan -->
 
 		<!-- footer -->
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-			<path fill="#64c9cf" fill-opacity="1" d="M0,128L120,149.3C240,171,480,213,720,218.7C960,224,1200,192,1320,176L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-		</svg>
-		<footer class="color-blue pb-3 text-center text-white">
+		<footer class="pb-3 text-center">
 			<p>
 				Created with <i class="bi bi-heart-fill text-danger"></i> by <a class="text-primary text-decoration-none" href="https://www.undangaja.online"><img src="image/logo/logofull.png" alt="undangaja log" width="100px" /></a>
 			</p>
