@@ -30,7 +30,7 @@
       scroll-behavior: smooth;
     }
     body {
-      background: url(image/background-dashboard.jpg) no-repeat center center fixed;
+      background: url(image/background/dashboar-blue.jpg) no-repeat center center fixed;
       height: 100%;
       background-position: center;
       background-repeat: no-repeat;
@@ -55,9 +55,9 @@
       font-family: "Acme", sans-serif;
     }
   </style>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark color-black">
+    <nav id="feature-navbar" class="navbar navbar-expand-lg navbar-dark color-black sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="image/logo/logofull.png" alt="undangaja logo" width="100" class="d-inline-block align-text-top" />
@@ -68,7 +68,7 @@
         <div class="collapse navbar-collapse fontacme" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              <a class="nav-link" href="#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#fitur">Fitur</a>
@@ -84,180 +84,181 @@
       </div>
     </nav>
     <!-- end navbar -->
-
-    <!-- jumbotron -->
-    <section id="home" class="container text-center mt-5 py-5" style="width: 100%">
-      <div class="row justify-content-center">
-        <div class="col-8 fontacme">
-          <h1 class="display-5">Sebarkan Undanganmu Dengan Mudah Bersama Kami <strong>undangaja.</strong></h1>
-        </div>
-      </div>
-      <hr class="my-4" />
-      <div class="row justify-content-center">
-        <div class="col-8">
-          <p><strong>Pilih Desain Undangan Kamu Disini Dan Langsung Sebarkan</strong></p>
-          <div class="d-grid gap-2 col-10 mx-auto">
-            <a class="btn color-red rounded-pill" href="#" role="button">BUAT UNDANGAN</a>
+    <div data-bs-spy="scroll" data-bs-target="#feature-navbar" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+      <!-- jumbotron -->
+      <section id="home" class="container text-center mt-5 py-5" style="width: 100%; color: white">
+        <div class="row justify-content-center">
+          <div class="col-8 fontacme">
+            <h1 class="display-5">Sebarkan Undanganmu Dengan Mudah Bersama Kami <strong>undangaja.</strong></h1>
           </div>
         </div>
-      </div>
-    </section>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#eeeeee"
-        fill-opacity="1"
-        d="M0,192L80,192C160,192,320,192,480,208C640,224,800,256,960,250.7C1120,245,1280,203,1360,181.3L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-      ></path>
-    </svg>
-    <!-- end jumbotron -->
-
-    <!-- fitur -->
-    <section id="fitur" class="color-white">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            <h1 class="fontacme">Fitur Undangan Kami</h1>
-            <p>Dapatkan Fitur fitur yang menarik disini</p>
-          </div>
-        </div>
-        <div class="row row-cols-2 row-cols-sm-4 justify-content-center">
-          <div class="col mb-3">
-            <div class="card">
-              <img src="image/background/background.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title fontacme">Desain Terkini</h5>
-                <p class="card-text"><small>Desain undangan yang menarik dan kekinian.</small></p>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-3">
-            <div class="card">
-              <img src="image/background/background.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title fontacme">Responsive</h5>
-                <p class="card-text"><small>Undanganmu tampil responsive disetiap perangkat.</small></p>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-3">
-            <div class="card">
-              <img src="image/background/background.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title fontacme">Galeri Foto</h5>
-                <p class="card-text"><small>undanganmu akan lebih menarik dengan kumpulan foto prewedding.</small></p>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-3">
-            <div class="card">
-              <img src="image/background/background.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title fontacme">Peta Lokasi</h5>
-                <p class="card-text"><small>Tamu undanganmu akan lebih mudah menemukan lokasi acara.</small></p>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-3">
-            <div class="card">
-              <img src="image/background/background.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title fontacme">Ucapan</h5>
-                <p class="card-text"><small>Menerima ucapan selamat dari tamu undaganmu.</small></p>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-3">
-            <div class="card">
-              <img src="image/background/background.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title fontacme">Musik</h5>
-                <p class="card-text"><small>Undanganmu lebih menarik dengan diiringi latar musik.</small></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#eeeeee" fill-opacity="1" d="M0,0L80,32C160,64,320,128,480,128C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-    </svg>
-    <!-- end fitur -->
-
-    <!-- why us -->
-    <section id="whyus" class="mb-3">
-      <div class="container text-center fontacme">
+        <hr class="my-4" />
         <div class="row justify-content-center">
           <div class="col-8">
-            <h1>kenapa Harus Dengan undangaja.</h1>
-            <p>Dengan kamu menggunakan undangaja kamu bisa menghemat biaya dan dengan mudah menyebarkan undanganmu ke semua teman - teman kamu.</p>
+            <p><strong>Pilih Desain Undangan Kamu Disini Dan Langsung Sebarkan</strong></p>
+            <div class="d-grid gap-2 col-10 mx-auto">
+              <a class="btn btn-light rounded-pill" href="#" role="button"><strong>BUAT UNDANGAN</strong></a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- end why us -->
+      </section>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#eeeeee"
+          fill-opacity="1"
+          d="M0,192L80,192C160,192,320,192,480,208C640,224,800,256,960,250.7C1120,245,1280,203,1360,181.3L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+        ></path>
+      </svg>
+      <!-- end jumbotron -->
 
-    <!-- desain -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#3A4750"
-        fill-opacity="1"
-        d="M0,224L80,224C160,224,320,224,480,234.7C640,245,800,267,960,261.3C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-      ></path>
-    </svg>
-    <section id="desain" class="color-abu">
-      <div class="container text-center">
-        <div class="row mb-5">
-          <div class="col fontacme">
-            <h1>Desain</h1>
-            <p>Pilih dan Temukan Desain yang kamu inginkan</p>
+      <!-- fitur -->
+      <section id="fitur" class="color-white">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <h1 class="fontacme">Fitur Undangan Kami</h1>
+              <p>Dapatkan Fitur fitur yang menarik disini</p>
+            </div>
+          </div>
+          <div class="row row-cols-2 row-cols-sm-4 justify-content-center">
+            <div class="col mb-3">
+              <div class="card">
+                <img src="image/background/background.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fontacme">Desain Terkini</h5>
+                  <p class="card-text"><small>Desain undangan yang menarik dan kekinian.</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-3">
+              <div class="card">
+                <img src="image/background/background.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fontacme">Responsive</h5>
+                  <p class="card-text"><small>Undanganmu tampil responsive disetiap perangkat.</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-3">
+              <div class="card">
+                <img src="image/background/background.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fontacme">Galeri Foto</h5>
+                  <p class="card-text"><small>undanganmu akan lebih menarik dengan kumpulan foto prewedding.</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-3">
+              <div class="card">
+                <img src="image/background/background.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fontacme">Peta Lokasi</h5>
+                  <p class="card-text"><small>Tamu undanganmu akan lebih mudah menemukan lokasi acara.</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-3">
+              <div class="card">
+                <img src="image/background/background.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fontacme">Ucapan</h5>
+                  <p class="card-text"><small>Menerima ucapan selamat dari tamu undaganmu.</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-3">
+              <div class="card">
+                <img src="image/background/background.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fontacme">Musik</h5>
+                  <p class="card-text"><small>Undanganmu lebih menarik dengan diiringi latar musik.</small></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-sm-3 mb-3">
-            <div class="card">
-              <img src="image/demo/demobluecore.JPG" class="card-img-top" alt="..." />
-              <div class="card-body text-dark">
-                <h5 class="card-title text-danger">BLUECORE</h5>
-                <a href="bluecore.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 mb-3">
-            <div class="card">
-              <img src="image/demo/demoyellowbird.jpg" class="card-img-top" alt="..." />
-              <div class="card-body text-dark">
-                <h5 class="card-title text-danger">YELLOWBIRD</h5>
-                <a href="yellowbird.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 mb-3">
-            <div class="card">
-              <img src="image/demo/demoblackcover.jpg" class="card-img-top" alt="..." />
-              <div class="card-body text-dark">
-                <h5 class="card-title text-danger">BLACKCOVER</h5>
-                <a href="blackcover.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
-              </div>
+      </section>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#eeeeee" fill-opacity="1" d="M0,0L80,32C160,64,320,128,480,128C640,128,800,64,960,48C1120,32,1280,64,1360,80L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+      </svg>
+      <!-- end fitur -->
+
+      <!-- why us -->
+      <section id="whyus" class="mb-3" style="color: white">
+        <div class="container text-center fontacme">
+          <div class="row justify-content-center">
+            <div class="col-8">
+              <h1>kenapa Harus Dengan undangaja.</h1>
+              <p>Dengan kamu menggunakan undangaja kamu bisa menghemat biaya dan dengan mudah menyebarkan undanganmu ke semua teman - teman kamu.</p>
             </div>
           </div>
         </div>
-        <!-- <div class="mt-3">
+      </section>
+      <!-- end why us -->
+
+      <!-- desain -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#3A4750"
+          fill-opacity="1"
+          d="M0,224L80,224C160,224,320,224,480,234.7C640,245,800,267,960,261.3C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+        ></path>
+      </svg>
+      <section id="desain" class="color-abu">
+        <div class="container text-center">
+          <div class="row mb-5">
+            <div class="col fontacme">
+              <h1>Desain</h1>
+              <p>Pilih dan Temukan Desain yang kamu inginkan</p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-sm-3 mb-3">
+              <div class="card">
+                <img src="image/demo/demobluecore.JPG" class="card-img-top" alt="..." />
+                <div class="card-body text-dark">
+                  <h5 class="card-title text-danger">BLUECORE</h5>
+                  <a href="bluecore.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mb-3">
+              <div class="card">
+                <img src="image/demo/demoyellowbird.jpg" class="card-img-top" alt="..." />
+                <div class="card-body text-dark">
+                  <h5 class="card-title text-danger">YELLOWBIRD</h5>
+                  <a href="yellowbird.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mb-3">
+              <div class="card">
+                <img src="image/demo/demoblackcover.jpg" class="card-img-top" alt="..." />
+                <div class="card-body text-dark">
+                  <h5 class="card-title text-danger">BLACKCOVER</h5>
+                  <a href="blackcover.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="mt-3">
           <button type="button" class="btn color-red rounded-pill">LIHAT LEBIH BANYAK</button>
         </div> -->
-      </div>
-    </section>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#3a4750" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,165.3C640,160,800,128,960,106.7C1120,85,1280,75,1360,69.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-    </svg>
-    <!-- end desain -->
+        </div>
+      </section>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#3a4750" fill-opacity="1" d="M0,128L80,138.7C160,149,320,171,480,165.3C640,160,800,128,960,106.7C1120,85,1280,75,1360,69.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+      </svg>
+      <!-- end desain -->
 
-    <!-- footer -->
-    <footer class="color-blue pb-3 text-center text-white">
-      <p>
-        Created with <i class="bi bi-heart-fill text-danger"></i> by <a class="text-primary text-decoration-none" href="https://www.undangaja.online"><img src="image/logo/logofull.png" alt="undangaja log" width="100px" /></a>
-      </p>
-    </footer>
-    <!-- end footer -->
+      <!-- footer -->
+      <footer class="color-blue pb-3 text-center text-white">
+        <p>
+          Created with <i class="bi bi-heart-fill text-danger"></i> by <a class="text-primary text-decoration-none" href="https://www.undangaja.online"><img src="image/logo/logofull.png" alt="undangaja log" width="100px" /></a>
+        </p>
+      </footer>
+      <!-- end footer -->
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   </body>
