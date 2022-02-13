@@ -71,13 +71,13 @@
               <a class="nav-link" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#fitur">Fitur</a>
+              <a class="nav-link" href="#fitur">Features</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#whyus">Why Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#desain">Desain</a>
+              <a class="nav-link" href="#desain">Design</a>
             </li>
           </ul>
         </div>
@@ -88,16 +88,16 @@
       <!-- jumbotron -->
       <section id="home" class="container text-center mt-5 py-5" style="width: 100%; color: white">
         <div class="row justify-content-center">
-          <div class="col-8 fontacme">
+          <div class="col-md-8 fontacme">
             <h1 class="display-5">Sebarkan Undanganmu Dengan Mudah Bersama Kami <strong>undangaja.</strong></h1>
           </div>
         </div>
         <hr class="my-4" />
         <div class="row justify-content-center">
-          <div class="col-8">
+          <div class="col-md-8">
             <p><strong>Pilih Desain Undangan Kamu Disini Dan Langsung Sebarkan</strong></p>
             <div class="d-grid gap-2 col-10 mx-auto">
-              <a class="btn btn-light rounded-pill" href="#" role="button"><strong>BUAT UNDANGAN</strong></a>
+              <a class="btn btn-light rounded-pill" href="#desain" role="button"><strong>PILIH UNDANGAN</strong></a>
             </div>
           </div>
         </div>
@@ -187,7 +187,7 @@
       <section id="whyus" class="mb-3" style="color: white">
         <div class="container text-center fontacme">
           <div class="row justify-content-center">
-            <div class="col-8">
+            <div class="col-md-8">
               <h1>kenapa Harus Dengan undangaja.</h1>
               <p>Dengan kamu menggunakan undangaja kamu bisa menghemat biaya dan dengan mudah menyebarkan undanganmu ke semua teman - teman kamu.</p>
             </div>
@@ -212,33 +212,39 @@
               <p>Pilih dan Temukan Desain yang kamu inginkan</p>
             </div>
           </div>
-          <div class="row justify-content-center">
+          <div class="row row-cols-2 row-cols-sm-3 justify-content-center">
             <div class="col-sm-3 mb-3">
-              <div class="card">
-                <img src="image/demo/demobluecore.JPG" class="card-img-top" alt="..." />
-                <div class="card-body text-dark">
-                  <h5 class="card-title text-danger">BLUECORE</h5>
-                  <a href="bluecore.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
+              <a href="bluecore.html" target="_blank" style="text-decoration: none">
+                <div class="card">
+                  <img src="image/demo/demobluecore.JPG" class="card-img-top" alt="..." />
+                  <div class="card-body text-dark">
+                    <h5 class="card-title text-danger">BLUECORE</h5>
+                    <a href="bluecore.html" target="_blank" class="btn btn-secondary rounded-pill">Buka Desain</a>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div class="col-sm-3 mb-3">
-              <div class="card">
-                <img src="image/demo/demoyellowbird.jpg" class="card-img-top" alt="..." />
-                <div class="card-body text-dark">
-                  <h5 class="card-title text-danger">YELLOWBIRD</h5>
-                  <a href="yellowbird.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
+              <a href="yellowbird.html" target="_blank" style="text-decoration: none">
+                <div class="card">
+                  <img src="image/demo/demoyellowbird.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body text-dark">
+                    <h5 class="card-title text-danger">YELLOWBIRD</h5>
+                    <a href="yellowbird.html" target="_blank" class="btn btn-secondary rounded-pill">Buka Desain</a>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div class="col-sm-3 mb-3">
-              <div class="card">
-                <img src="image/demo/demoblackcover.jpg" class="card-img-top" alt="..." />
-                <div class="card-body text-dark">
-                  <h5 class="card-title text-danger">BLACKCOVER</h5>
-                  <a href="blackcover.html" target="_blank" class="btn btn-secondary rounded-pill">Detail Undangan</a>
+              <a href="blackcover.html" target="_blank" style="text-decoration: none">
+                <div class="card">
+                  <img src="image/demo/demoblackcover.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body text-dark">
+                    <h5 class="card-title text-danger">BLACKCOVER</h5>
+                    <a href="blackcover.html" target="_blank" class="btn btn-secondary rounded-pill">Buka Desain</a>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <!-- <div class="mt-3">
@@ -261,5 +267,35 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              1000,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
   </body>
 </html>
