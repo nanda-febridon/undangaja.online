@@ -22,8 +22,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet" />
 
-	<!-- style scroll -->
-	<link rel="stylesheet" href="style-scroll.css">
+	  <!-- style scroll -->
+	  <link rel="stylesheet" href="style-scroll.css">
+
+    <!-- style scroll -->
+	  <link rel="stylesheet" href="cover.css">
 
     <title>BLACKCOVER | undangaja.</title>
     <link rel="icon" href="image/logo/logo.png" />
@@ -56,15 +59,6 @@
       right: 3.5%;
       bottom: 2.5%;
     }
-
-    .cover-wedding{
-      background-image: url(image/2.jpg);
-      height: 100%;
-      width: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
   </style>
   <body id="mybody">
     <!-- audio -->
@@ -77,12 +71,19 @@
     <!-- end audio -->
 
     <!-- cover -->
-    <!-- <div id="cover" class="cover-wedding">
-    </div> -->
+    <div id="cover" class="cover-wedding" style="background-image: url('image/image-demo/image-1.jpg');"></div>
+    <div class="cover-text ">
+      <h1 class="fontparis display-4">Romeo & Juliet Wedding</h1>
+      <div class="mt-4">
+        <p>Dear Mr./Mrs./Ms</p>
+        <h4>Nanda Febridon & Calon</h3>
+        <a href="#jumbotron" class="btn btn-sm btn-light rounded-pill"><i class="bi bi-arrow-down"></i><strong> BUKA UNDANGAN </strong><i class="bi bi-arrow-down"></i></a>
+      </div>
+    </div>
     <!-- end cover -->
 
     <!-- jumbotron -->
-    <section class="jumbotron text-center mt-4" data-aos="fade-down">
+    <section id="jumbotron" class="jumbotron text-center mt-4" data-aos="fade-down">
       <h1 class="display-4 fontparis">The Wedding</h1>
       <p>We invited you to celebrate our wedding</p>
       <img class="rounded-pill img-fluid img-thumbnail" src="image/image-demo/image-1.jpg" alt="image jumbo" width="450px" />
