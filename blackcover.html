@@ -31,8 +31,9 @@
   <style>
     body,html {
       background: url("image/background/background-blackcover.jpg") no-repeat center center fixed;
-      background-position: center;
-      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       background-size: cover;
       color: white;
 
@@ -67,11 +68,11 @@
   </style>
   <body id="mybody">
     <!-- audio -->
-    <audio id="music"loop>
+    <audio id="music"loop autoplay>
       <source src="music/wedding.mp3" type="audio/mp3" />
     </audio>
     <div class="music-button">
-      <h3 id="musicIcon" onclick="buttonMusic()" class="bi bi-play-circle-fill"></h3>
+      <h3 id="musicIcon" onclick="buttonMusic()" class="bi bi-pause-circle-fill"></h3>
     </div>
     <!-- end audio -->
 
