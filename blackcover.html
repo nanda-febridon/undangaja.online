@@ -25,7 +25,7 @@
 	  <!-- style scroll -->
 	  <link rel="stylesheet" href="style-scroll.css">
 
-    <!-- style scroll -->
+    <!-- style cover -->
 	  <link rel="stylesheet" href="cover.css">
 
     <title>BLACKCOVER | undangaja.</title>
@@ -60,9 +60,9 @@
       bottom: 2.5%;
     }
   </style>
-  <body id="mybody">
+  <body>
     <!-- audio -->
-    <audio id="music"loop autoplay>
+    <audio id="music"loop>
       <source src="music/wedding.mp3" type="audio/mp3" />
     </audio>
     <div class="music-button">
@@ -72,12 +72,12 @@
 
     <!-- cover -->
     <div id="cover" class="cover-wedding" style="background-image: url('image/image-demo/image-1.jpg');"></div>
-    <div class="cover-text ">
+    <div id="cover-text" class="cover-text ">
       <h1 class="fontparis display-4">Romeo & Juliet Wedding</h1>
       <div class="mt-4">
         <p>Dear Mr./Mrs./Ms</p>
-        <h4>Nanda Febridon & Calon</h3>
-        <a href="#jumbotron" class="btn btn-sm btn-light rounded-pill"><i class="bi bi-arrow-down"></i><strong> BUKA UNDANGAN </strong><i class="bi bi-arrow-down"></i></a>
+        <h4>Ari Hermana & Calon</h3>
+        <button onclick="hiddenCover()" class="btn btn-sm btn-dark rounded-pill"><i class="bi bi-arrow-down"></i><strong> BUKA UNDANGAN </strong><i class="bi bi-arrow-down"></i></button>
       </div>
     </div>
     <!-- end cover -->
@@ -416,10 +416,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
-      AOS.init();
+      function hiddenCover(){
+        document.getElementById("cover").style.visibility = "hidden";
+        document.getElementById("cover-text").style.visibility = "hidden";
+        window.scrollTo(0, 0);
+        AOS.init();
+        document.getElementById("music").play();
+      }
     </script>
 
     <script>
