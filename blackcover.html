@@ -297,7 +297,6 @@
             </div>
             <div class="alert alert-dark alert-dismissible fade show d-none alert-terima" role="alert">
               <strong>Terimakasih!</strong> Ucapan anda telah kami Terima.
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <form name="submit-form-undangaja">
               <div class="mb-3">
@@ -314,6 +313,7 @@
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 <strong>Loading...</strong>
               </button>
+              <button class="btn btn-dark d-none btn-disabled rounded-pill" disabled><strong>Thank You</strong></button>
             </form>
           </div>
           <div class="col-md-6">
@@ -323,6 +323,7 @@
             <div class="container" style="height: 300px; overflow-y: scroll">
               <div class="raw">
                 <div class="guestbook-list">
+                  <div id="guestbook" ></div>
                   <div class="user-guestbook">
                     <div class="row align-items-start">
                       <div class="col-1">
@@ -483,7 +484,12 @@
       const form = document.forms["submit-form-undangaja"];
       const btnKirim = document.querySelector(".btn-kirim");
       const btnLoading = document.querySelector(".btn-putar");
+      const btnDisabled = document.querySelector(".btn-disabled");
       const alertTerima = document.querySelector(".alert-terima");
+
+      const nama = document.querySelector('#inputNama');
+      const pesan = document.querySelector('#inputUcapan');
+      const guest = document.querySelector('#guestbook')
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -492,12 +498,16 @@
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
             btnLoading.classList.toggle("d-none");
-            btnKirim.classList.toggle("d-none");
+            btnDisabled.classList.toggle("d-none");
             alertTerima.classList.toggle("d-none");
+
+            guest.innerHTML = '<div class="user-guestbook"><div class="row align-items-start"><div class="col-1"><i class="bi bi-person-badge" style="font-size: 25px"></i></div><div class="col-10"><h4>'+ nama.value +'</h4><p>'+ pesan.value +'</p></div></div></div><hr />';
+            
             form.reset();
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
+        
       });
     </script>
 
