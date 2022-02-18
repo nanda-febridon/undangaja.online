@@ -22,11 +22,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
 
-    <!-- style scroll -->
-    <link rel="stylesheet" href="style-scroll.css" />
-
-    <!-- style cover -->
-	  <link rel="stylesheet" href="cover.css">
+    <!-- same style -->
+    <link rel="stylesheet" href="style.css" />
 
     <title>YELLOWBIRD | undangaja.</title>
     <link rel="icon" href="image/logo/logo.png" />
@@ -41,20 +38,6 @@
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
-    }
-    .fontbon {
-      font-family: "Bonheur Royale", cursive;
-    }
-    .fontdancing {
-      font-family: "Dancing Script", cursive;
-    }
-    .color-yellow {
-      background: #ffc107;
-    }
-    .music-button {
-      position: fixed;
-      right: 3.5%;
-      bottom: 2.5%;
     }
   </style>
   <body>
@@ -122,7 +105,7 @@
     <!-- end welcome -->
 
     <!-- galery -->
-    <section id="galery">
+    <section id="galery" data-aos="fade-down">
       <div class="container text-center mb-3">
         <div class="row">
           <div class="col">
@@ -410,132 +393,14 @@
         <a class="text-primary text-decoration-none" href="https://www.undangaja.online"><img src="image/logo/logofull.png" alt="undangaja log" width="100px" /></a>
       </p>
     </footer>
+    <input type="hidden" value="January 25, 2025 00:00:00" id="getCountdown">
     <!-- end footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    
-    <script>
-      function hiddenCover(){
-        document.getElementById("cover").style.visibility = "hidden";
-        document.getElementById("cover-text").style.visibility = "hidden";
-        window.scrollTo(0, 0);
-        AOS.init();
-        document.getElementById("music").play();
-      }
-    </script>
 
-    <script>
-      var audio = document.getElementById("music");
-      var button = document.getElementById("musicIcon");
-
-      function buttonMusic() {
-        if (button.className == "bi bi-play-circle-fill") {
-          audio.play();
-          button.className = "bi bi-pause-circle-fill";
-        } else {
-          audio.pause();
-          button.className = "bi bi-play-circle-fill";
-        }
-      }
-    </script>
-
-    <script>
-      (function () {
-        const second = 1000,
-          minute = second * 60,
-          hour = minute * 60,
-          day = hour * 24;
-
-        let birthday = "January 24, 2025 00:00:00",
-          countDown = new Date(birthday).getTime(),
-          x = setInterval(function () {
-            let now = new Date().getTime(),
-              distance = countDown - now;
-
-            (document.getElementById("days").innerText = Math.floor(distance / day)),
-              (document.getElementById("hours").innerText = Math.floor((distance % day) / hour)),
-              (document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute)),
-              (document.getElementById("seconds").innerText = Math.floor((distance % minute) / second));
-
-            //do something later when date is reached
-            if (distance < 0) {
-              let headline = document.getElementById("headline"),
-                countdown = document.getElementById("countdown"),
-                content = document.getElementById("content");
-
-              headline.innerText = "Countdown Timer";
-              countdown.style.display = "none";
-              content.style.display = "block";
-
-              clearInterval(x);
-            }
-            //seconds
-          }, 0);
-      })();
-    </script>
-
-    <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbyz8kwGuHJCzZJe8lun5IFqojnJIy5IwZa9ovcam0IjqVei-M3HLjZztFOqFapxLkgahw/exec";
-      const form = document.forms["submit-form-undangaja"];
-      const btnKirim = document.querySelector(".btn-kirim");
-      const btnLoading = document.querySelector(".btn-putar");
-      const btnDisabled = document.querySelector(".btn-disabled");
-      const alertTerima = document.querySelector(".alert-terima");
-
-      const nama = document.querySelector('#inputNama');
-      const pesan = document.querySelector('#inputUcapan');
-      const guest = document.querySelector('#guestbook')
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        btnLoading.classList.toggle("d-none");
-        btnKirim.classList.toggle("d-none");
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            btnLoading.classList.toggle("d-none");
-            btnDisabled.classList.toggle("d-none");
-            alertTerima.classList.toggle("d-none");
-
-            guest.innerHTML = '<div class="user-guestbook"><div class="row align-items-start"><div class="col-1"><i class="bi bi-person-badge" style="font-size: 25px"></i></div><div class="col-10"><h4>'+ nama.value +'</h4><p>'+ pesan.value +'</p></div></div></div><hr />';
-            
-            form.reset();
-            console.log("Success!", response);
-          })
-          .catch((error) => console.error("Error!", error.message));
-        
-      });
-    </script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-  $(document).ready(function () {
-    // Add smooth scrolling to all links
-    $("a").on("click", function (event) {
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-
-        // Store hash
-        var hash = this.hash;
-
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $("html, body").animate(
-          {
-            scrollTop: $(hash).offset().top,
-          },
-          1000,
-          function () {
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          }
-        );
-      } // End if
-    });
-  });
-</script>
+    <!-- same script -->
+    <script src="javascript.js"></script>
   </body>
 </html>
